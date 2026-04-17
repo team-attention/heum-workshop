@@ -15,7 +15,7 @@
 
 **Claude Code도 똑같이 합니다.** 하나의 Claude가 혼자 다 하는 게 아니라, 여러 전문 에이전트(sub-agent)에게 동시에 일을 시킵니다. 각자 맡은 분야를 분석하고, 결과를 모아서 보고합니다.
 
-이건 Day 1 Block 3-4에서 배운 subagent(Task)의 확장입니다. 그때는 하나의 subagent에게 하나의 일을 시켰다면, 이제는 **여러 subagent에게 동시에 여러 일을 시키는 것**입니다.
+**Subagent(Task)란?** Claude가 자기 대신 "다른 Claude"를 불러서 일을 시키는 기능입니다. 본인은 지휘자로 남고, 부하 Claude들이 실제 작업을 병렬로 처리합니다. Multi-agent는 이 subagent를 **여러 명 동시에** 굴리는 확장 패턴입니다.
 
 ---
 
@@ -108,7 +108,7 @@ Claude Code에서 아래 명령어를 입력하세요:
 
 Claude가 session-wrap 스킬의 전체 내용을 보여줄 것입니다. 천천히 읽어보세요.
 
-> 만약 "session-wrap 스킬을 찾을 수 없다"고 나오면, `npx skills add ai-native-camp/camp-2 --agent claude-code --yes`를 실행해서 최신 스킬을 설치하세요.
+> 이 레포(`heum-3h/`)에는 session-wrap 원본이 `.claude/skills/session-wrap/SKILL.md`에 이미 포함되어 있다. 에이전트는 `.claude/agents/` 아래에 있다. 별도 설치 불필요.
 
 ### Step 2. 구조 분석
 

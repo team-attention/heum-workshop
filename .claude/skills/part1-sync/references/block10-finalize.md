@@ -7,31 +7,32 @@
 
 ## EXPLAIN
 
-### Block 5~9 정리
+### 지금까지 진행 정리 (Part 1)
 
-지금까지 4개 소스를 각각 다른 방법으로 연결했다:
+Heum 3시간 강의 Part 1에서는 다음을 다뤘다:
 
 ```
-Block 5:  스켈레톤 생성 (4개 STUB)
-Block 6:  Slack     ← Connector (브라우저 클릭)         ★☆☆☆
-Block 7:  Notion    ← claude mcp add (CLI 명령어)       ★★☆☆
-Block 8:  Linear    ← Official Plugin (/plugin)         ★★★☆
-Block 9:  Google    ← 커뮤니티 Plugin (구조 분석)        ★★★★
+Block 0:  MCP 개념 — 왜 필요한가, 어떤 구조인가
+Block 1:  MCP 서버 추가 — claude mcp add 실습
+Block 6:  Slack 연결 — Connector(브라우저 클릭) 방식
+Block 10: 지금 — 병렬 수집 + Output 완성
 ```
 
 ### 4가지 연결 방법 총정리: 언제 어떤 방법?
 
+오늘은 Connector 방식(Block 6)을 체험했지만, 실제 워크플로우에서는 상황에 따라 4가지 방법을 골라 쓴다:
+
 | 상황 | 추천 방법 | 이유 |
 |------|----------|------|
-| 해당 서비스가 Connector에 있다 | **Connector** | 가장 쉽고 빠르다 |
+| 해당 서비스가 Connector에 있다 | **Connector** | 가장 쉽고 빠르다 (오늘 체험) |
 | HTTP MCP 서버 주소를 알고 있다 | **`claude mcp add`** | 명령어 한 줄이면 끝 |
-| 공식 Plugin이 있다 | **Plugin** | MCP + 스킬 + 설정 한 번에 |
+| 공식 MCP 서버를 더 찾고 싶다 | **MCP 레지스트리** | 공식 목록에서 탐색 |
 | 위 방법이 다 안 된다 | **API 스크립트 (고급)** | Claude가 코드를 작성 |
 
-> 난이도 순서: Connector < mcp add < Plugin < API 스크립트 (고급)
-> 유연성 순서: API 스크립트 > Plugin > mcp add > Connector
+> 난이도 순서: Connector < mcp add < 레지스트리 < API 스크립트 (고급)
+> 유연성 순서: API 스크립트 > 레지스트리 > mcp add > Connector
 >
-> **참고**: API 스크립트는 고급 방법이다. 오늘 배운 4가지 방법으로 대부분의 도구를 연결할 수 있다.
+> **참고**: Notion/Linear/Google 연결은 원본 AI Native Camp Camp-2(7일 커리큘럼)에서 각각 별도 블록으로 다룬다. 본 3시간 강의에서는 Connector 방식 한 가지만 체험한다.
 
 ### 병렬 수집이란?
 
@@ -213,7 +214,7 @@ Claude가 4개 subagent를 동시에 호출하여 수집을 시작한다:
 
 ## QUIZ
 
-> Block 10은 종합 퀴즈를 출제한다. 사용자가 돌아오면 먼저 "Day 2의 모든 과정을 완료했습니다! 마지막으로 오늘 배운 것을 정리하는 퀴즈입니다." 라고 안내한 뒤 아래 퀴즈를 순서대로 출제한다.
+> Block 10은 종합 퀴즈를 출제한다. 사용자가 돌아오면 먼저 "Part 1의 모든 과정을 완료했습니다! 마지막으로 배운 것을 정리하는 퀴즈입니다." 라고 안내한 뒤 아래 퀴즈를 순서대로 출제한다.
 
 ### Quiz 10-1: 병렬 수집
 
@@ -253,43 +254,43 @@ AskUserQuestion({
 
 정답: 3번 (Markdown 파일). 별도 설정 없이 바로 사용할 수 있어서 가장 간단하다. 그래서 기본 출력으로 항상 포함된다.
 
-### Quiz 10-3: 4가지 연결 방법
+### Quiz 10-3: 연결 방법의 다양성
 
 ```json
 AskUserQuestion({
   "questions": [{
-    "question": "오늘 배운 4가지 연결 방법을 난이도가 낮은 순서대로 나열하면?",
+    "question": "오늘 Connector로 Slack을 연결했습니다. 같은 목적으로 쓸 수 있는 다른 방법이 아닌 것은?",
     "header": "Quiz 10-3",
     "options": [
-      {"label": "mcp add → Connector → Plugin → 커뮤니티 Plugin", "description": "Connector가 가장 쉬운 방법"},
-      {"label": "Connector → mcp add → Plugin → 커뮤니티 Plugin", "description": "Block 6 → 7 → 8 → 9 순서 그대로"},
-      {"label": "Plugin → Connector → mcp add → 커뮤니티 Plugin", "description": "Plugin이 가장 쉽지는 않음"}
+      {"label": "claude mcp add", "description": "HTTP MCP 서버 직접 등록"},
+      {"label": "공식 MCP 레지스트리에서 찾기", "description": "공개된 MCP 서버 목록에서 탐색"},
+      {"label": "HTML/CSS 작성", "description": "MCP 연결과 무관한 프런트엔드 작업"}
     ],
     "multiSelect": false
   }]
 })
 ```
 
-정답: 2번. Connector(클릭) → mcp add(명령어) → Plugin(패키지 설치) → 커뮤니티 Plugin(구조 이해까지) 순으로 난이도가 올라간다.
+정답: 3번. MCP 연결 방법은 Connector / mcp add / 레지스트리 탐색 등 여러 가지가 있지만, HTML/CSS 작성은 전혀 다른 영역이다.
 
-### Quiz 10-4: Day 2 종합
+### Quiz 10-4: Part 1 종합
 
 ```json
 AskUserQuestion({
   "questions": [{
-    "question": "Day 2에서 배운 핵심 3가지를 고르세요.",
+    "question": "Part 1에서 배운 핵심 3가지를 고르세요.",
     "header": "Quiz 10-4",
     "options": [
-      {"label": "4가지 도구 연결 방법", "description": "Connector, mcp add, Plugin, 커뮤니티 Plugin"},
-      {"label": "HTML 코딩", "description": "Day 2에서 HTML은 다루지 않았음"},
-      {"label": "subagent 병렬 수집", "description": "여러 소스에서 동시에 정보 수집"},
-      {"label": "서버 배포", "description": "Day 2에서 배포는 다루지 않았음"},
-      {"label": "점진적 스킬 구축", "description": "STUB → 하나씩 채움 → 완성"}
+      {"label": "MCP 개념 — Host/Client/Server 구조", "description": "AI와 외부 도구를 연결하는 표준"},
+      {"label": "HTML 코딩", "description": "Part 1에서 HTML은 다루지 않았음"},
+      {"label": "Connector로 Slack 연결", "description": "브라우저에서 클릭으로 MCP 연결"},
+      {"label": "서버 배포", "description": "Part 1에서 배포는 다루지 않았음"},
+      {"label": "my-context-sync 스킬로 병렬 수집", "description": "스킬 한 줄로 여러 소스를 동시 수집"}
     ],
     "multiSelect": true
   }]
 })
 ```
 
-정답: 4가지 도구 연결 방법(1번), subagent 병렬 수집(3번), 점진적 스킬 구축(5번) — 3개 모두 선택
-피드백: "완벽합니다! 4가지 방법으로 도구를 연결하고, subagent로 동시에 수집하고, STUB에서 시작해 점진적으로 스킬을 완성했습니다. 이 3가지가 Day 2의 핵심입니다. 내일부터는 이 스킬을 기반으로 더 발전시켜 나갑니다!"
+정답: MCP 개념(1번), Connector 연결(3번), my-context-sync 스킬(5번) — 3개 모두 선택
+피드백: "Part 1 완료! MCP의 개념부터 Connector로 Slack 연결, my-context-sync 스킬까지 한 흐름으로 경험했습니다. 이제 Part 2 (Clarify)로 넘어갑니다."

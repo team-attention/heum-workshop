@@ -176,16 +176,19 @@ AskUserQuestion은 이런 구조로 되어 있다:
 | **제약** | "빠르게" | 1시간 내 / 오늘 중 / 이번 주 |
 | **우선순위** | "여러 기능" | 반드시 / 있으면 좋고 / 나중에 |
 
-### Day 1에서 설치한 clarify 플러그인
+### 이 레포에 이미 포함된 clarify 스킬
 
-Day 1 Block 3-7에서 이미 clarify 플러그인을 설치했다. 기억나는가?
+Heum 3시간 강의 레포(`heum-3h/`)에는 `clarify` 계열 스킬(vague, unknown, metamedium)이 **이미 포함**되어 있다. 별도 설치 없이 바로 사용 가능.
 
 ```
-/plugin marketplace add team-attention/plugins-for-claude-natives
-/plugin install clarify
+.claude/skills/vague/         ← 모호한 요구를 구조화된 질문으로 변환
+.claude/skills/unknown/       ← 알지 못하는 영역을 드러내는 프레임워크
+.claude/skills/metamedium/    ← 메타 수준의 명확화
 ```
 
-오늘은 이 플러그인을 **직접 써보고, 해부하고, 나만의 버전을 만든다**.
+> 원본은 `plugins-for-claude-natives` 레포(team-attention)에서 관리되지만, 본 강의에서는 설치 단계 없이 바로 쓸 수 있도록 파일을 직접 넣어두었다.
+
+오늘은 이 스킬을 **직접 써보고, 해부하고, 나만의 버전을 만든다**.
 
 ## EXECUTE
 

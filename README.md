@@ -38,16 +38,22 @@
 
 > 커리큘럼은 **뼈대**이고 공동 세션은 **살**이다. 참가자 눈빛이 바뀌는 순간을 따라간다.
 
-## 설치
+## 설치 — 없음 (self-contained)
+
+이 레포는 **clone만 하면 바로 쓸 수 있다**. 별도 플러그인 설치나 `npx skills add` 같은 명령이 필요 없다.
 
 ```bash
-# 1. 이 레포를 clone한 프로젝트에서 실행
-# 2. .claude/skills/ 아래 스킬이 자동 인식된다
-# 3. Claude Code에서 "part1" 또는 "sync" 등으로 스킬 호출
+# 1. 이 레포를 clone
+git clone <repo-url> heum-3h
+cd heum-3h
 
-# 기반이 되는 원본 커리큘럼(선택)
-npx skills add ai-native-camp/camp-2
+# 2. Claude Code 실행 (이 폴더에서)
+claude
+
+# 3. 스킬 호출 — 예: "Part 1 시작" 또는 "clarify 써보자"
 ```
+
+> 핵심 스킬(`vague`, `unknown`, `metamedium`, `session-wrap`, `history-insight`, `session-analyzer`, `team-assemble`)은 모두 `.claude/skills/` 아래에 직접 포함되어 있다. 원본은 [plugins-for-claude-natives](https://github.com/team-attention/plugins-for-claude-natives)에서 관리되지만, 강의 중 설치 단계로 시간 낭비하지 않도록 파일을 그대로 넣어뒀다.
 
 ## 디렉토리 구조
 
@@ -56,21 +62,38 @@ heum-3h/
 ├── README.md                     # 본 문서
 ├── .gitignore
 └── .claude/
-    └── skills/
-        ├── part1-sync/           # Part 1: MCP & Context Sync
-        │   ├── SKILL.md
-        │   ├── references/       # block 0, 1, 6, 10 (원본 Day 2에서 엄선)
-        │   └── templates/
-        ├── part2-clarify/        # Part 2: Clarify
-        │   ├── SKILL.md
-        │   ├── references/       # block 0, 1, 2 (원본 Day 3에서 엄선)
-        │   └── templates/
-        ├── part3-wrap/           # Part 3: Wrap
-        │   ├── SKILL.md
-        │   └── references/       # block 0, 1, 2, 3 (원본 Day 4에서 엄선)
-        └── part-extra/           # Agent Teams / Hook / Plugin (선택)
-            ├── SKILL.md
-            └── references/       # block 3-5, 3-6, 3-7 (원본 Day 1에서 엄선)
+    ├── skills/
+    │   ├── part1-sync/           # Part 1: MCP & Context Sync
+    │   │   ├── SKILL.md
+    │   │   ├── references/       # block 0, 1, 6, 10 (원본 Day 2에서 엄선)
+    │   │   └── templates/
+    │   ├── part2-clarify/        # Part 2: Clarify (진행용)
+    │   │   ├── SKILL.md
+    │   │   ├── references/       # block 0, 1, 2 (원본 Day 3에서 엄선)
+    │   │   └── templates/
+    │   ├── part3-wrap/           # Part 3: Wrap (진행용)
+    │   │   ├── SKILL.md
+    │   │   └── references/       # block 0, 1, 2, 3 (원본 Day 4에서 엄선)
+    │   ├── part-extra/           # Agent Teams / Hook / Plugin (선택)
+    │   │   ├── SKILL.md
+    │   │   └── references/
+    │   │
+    │   │  ── 수강생이 바로 사용하는 핵심 스킬 (plugins-for-claude-natives 원본) ──
+    │   ├── vague/                # clarify: 모호한 요구 → 구조화된 질문
+    │   ├── unknown/              # clarify: 알지 못하는 영역 드러내기
+    │   ├── metamedium/           # clarify: 메타 수준의 명확화
+    │   ├── session-wrap/         # 세션 종료 시 multi-agent로 정리
+    │   ├── history-insight/      # 과거 세션 기록 분석
+    │   ├── session-analyzer/     # 스킬 실행 검증
+    │   └── team-assemble/        # 전문가 팀 구성 + 병렬 실행
+    ├── agents/                   # session-wrap이 호출하는 subagent 5종
+    │   ├── automation-scout.md
+    │   ├── doc-updater.md
+    │   ├── duplicate-checker.md
+    │   ├── followup-suggester.md
+    │   └── learning-extractor.md
+    └── commands/
+        └── wrap.md               # /wrap 슬래시 명령어
 ```
 
 ## 원본 커리큘럼 출처 (Distillation Source)
@@ -90,10 +113,7 @@ heum-3h/
 | Part 3 (wrap) | Day 4 — Wrap & Analyze | 6블록 → **4블록** |
 | Part Extra | Day 1 — Onboarding (Agent Teams / Hook / Plugin) | 7블록 → **3블록** |
 
-> 전체 커리큘럼(7일) 이수를 원하는 참가자는 원본 Camp-2 GitHub 레포에서 설치 가능:
-> ```bash
-> npx skills add ai-native-camp/camp-2
-> ```
+> 전체 커리큘럼(7일) 이수를 원하는 참가자는 원본 Camp-2 GitHub 레포([ai-native-camp/camp-2](https://github.com/ai-native-camp/camp-2))를 참고한다. 본 3시간 강의에서는 별도 설치 없이 이 레포만으로 완결된다.
 
 ## Claude Code 사용 안내
 

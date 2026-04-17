@@ -50,22 +50,22 @@ channels:
 
 ### 소스 2: Notion
 
-<!-- 🔧 Block 7에서 채움 (연결 방법: claude mcp add) -->
+<!-- 🔧 본 강의 범위 외 — 문서/지식 도구 연결 예시 (숙제용 STUB) -->
 
 | 항목 | 값 |
 |------|-----|
-| 연결 방법 | `[STUB - Block 7에서 claude mcp add로 연결]` |
+| 연결 방법 | `[STUB - claude mcp add로 연결]` |
 | 수집 범위 | 지정된 데이터베이스 |
 
 ```yaml
 databases:
-  - name: "[STUB - Block 7에서 설정]"
+  - name: "[STUB - 본인 workspace 설정]"
     id: "[STUB]"
 ```
 
 수집 방법:
 ```
-[STUB - Block 7에서 MCP 서버 연결 후 작성]
+[STUB - MCP 서버 연결 후 작성]
 ```
 
 추출할 정보:
@@ -75,16 +75,16 @@ databases:
 
 ### 소스 3: Linear
 
-<!-- 🔧 Block 8에서 채움 (연결 방법: Official Plugin) -->
+<!-- 🔧 본 강의 범위 외 — 이슈 트래커 연결 예시 (숙제용 STUB) -->
 
 | 항목 | 값 |
 |------|-----|
-| 연결 방법 | `[STUB - Block 8에서 /plugin install로 연결]` |
+| 연결 방법 | `[STUB - 수강생 본인 프로젝트 맞춰 MCP로 연결]` |
 | 수집 범위 | 나에게 할당된 이슈 |
 
 수집 방법:
 ```
-[STUB - Block 8에서 Plugin 설치 후 작성]
+[STUB - Linear/Jira/GitHub 등 본인 도구에 맞게 작성]
 ```
 
 추출할 정보:
@@ -94,16 +94,16 @@ databases:
 
 ### 소스 4: Google Calendar / Gmail
 
-<!-- 🔧 Block 9에서 채움 (연결 방법: Plugin 구조 분석 + 설치) -->
+<!-- 🔧 본 강의 범위 외 — 캘린더/메일 도구 연결 예시 (숙제용 STUB) -->
 
 | 항목 | 값 |
 |------|-----|
-| 연결 방법 | `[STUB - Block 9에서 커뮤니티 Plugin으로 연결]` |
+| 연결 방법 | `[STUB - MCP 서버 또는 본인 프로젝트의 스킬로 연결]` |
 | 수집 범위 | 오늘 ~ 7일 후 (Calendar) / 최근 7일 (Gmail) |
 
 수집 방법:
 ```
-[STUB - Block 9에서 Plugin 설치 후 작성]
+[STUB - MCP/스킬 연결 후 작성]
 ```
 
 추출할 정보:

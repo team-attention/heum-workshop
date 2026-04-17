@@ -51,7 +51,7 @@ Slack은 Connector를 지원하는 대표적인 도구다. 이번 블록에서 S
 
 ### Plan B: Slack이 없다면?
 
-Slack을 사용하지 않는다면 이 블록을 skip하고 Block 7로 이동할 수 있다. 소스 1은 비워둔 채 다음 도구부터 연결하면 된다.
+Slack을 사용하지 않는다면 이 블록을 skip하고 Block 10(마무리)으로 이동할 수 있다. 소스 1은 비워둔 채 나중에 본인 도구에 맞춰 연결하면 된다.
 
 ## EXECUTE
 
@@ -65,7 +65,7 @@ AskUserQuestion({
     "options": [
       {"label": "네, Slack 연결합니다", "description": "Connector로 Slack을 연결합니다"},
       {"label": "회사 계정이라 안 될 것 같아요", "description": "개인 Slack이나 AI Native Camp Slack으로 연결합니다"},
-      {"label": "Slack 안 씁니다, skip할게요", "description": "이 블록을 건너뛰고 Block 7로 이동합니다"}
+      {"label": "Slack 안 씁니다, skip할게요", "description": "이 블록을 건너뛰고 Block 10으로 이동합니다"}
     ],
     "multiSelect": false
   }]

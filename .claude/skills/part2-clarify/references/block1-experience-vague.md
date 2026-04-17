@@ -43,17 +43,14 @@ Phase 4: Save           결과를 파일로 저장할지 물어봄
 
 ### 1단계: 플러그인 설치 확인
 
-먼저 clarify 플러그인이 설치되어 있는지 확인한다:
+먼저 이 레포(`heum-3h/`)의 `.claude/skills/` 아래 `vague`, `unknown`, `metamedium` 스킬이 보이는지 확인한다:
 
 ```
-/plugin
+ls .claude/skills/
 ```
 
-> 목록에 `clarify`가 보이면 OK. 없으면 아래 명령으로 다시 설치한다:
-> ```
-> /plugin marketplace add team-attention/plugins-for-claude-natives
-> /plugin install clarify
-> ```
+> `vague`, `unknown`, `metamedium`이 보이면 OK. 별도 설치는 필요 없다 — 이 레포를 clone한 순간 바로 쓸 수 있다.
+> 원본은 `plugins-for-claude-natives` 레포에서 관리되며, 본 강의에서는 파일을 직접 포함시켰다.
 
 ### 2단계: 모호한 요구사항 던지기
 
