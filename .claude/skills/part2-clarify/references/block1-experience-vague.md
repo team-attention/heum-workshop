@@ -1,12 +1,12 @@
-# Block 1: clarify:vague 체험
+# Block 1: clarify-vague 체험
 
 ## EXPLAIN
 
-### clarify 플러그인의 vague 스킬
+### clarify-vague 스킬
 
-Day 1에서 설치한 clarify 플러그인에는 `vague`라는 스킬이 있다. 모호한 요구사항을 구체적인 스펙으로 바꿔주는 스킬이다.
+이 레포에 포함된 `clarify-vague` 스킬은 모호한 요구사항을 구체적인 스펙으로 바꿔주는 스킬이다.
 
-vague 스킬의 4단계 프로토콜:
+clarify-vague 스킬의 4단계 프로토콜:
 
 ```
 Phase 1: Capture        원본 요구사항을 그대로 기록
@@ -39,17 +39,17 @@ Phase 4: Save           결과를 파일로 저장할지 물어봄
 
 ## EXECUTE
 
-이제 clarify:vague를 직접 체험해보자.
+이제 clarify-vague를 직접 체험해보자.
 
 ### 1단계: 플러그인 설치 확인
 
-먼저 이 레포(`heum-3h/`)의 `.claude/skills/` 아래 `vague`, `unknown`, `metamedium` 스킬이 보이는지 확인한다:
+먼저 이 레포(`heum-3h/`)의 `.claude/skills/` 아래 `clarify-vague`, `clarify-unknown`, `clarify-metamedium` 스킬이 보이는지 확인한다:
 
 ```
 ls .claude/skills/
 ```
 
-> `vague`, `unknown`, `metamedium`이 보이면 OK. 별도 설치는 필요 없다 — 이 레포를 clone한 순간 바로 쓸 수 있다.
+> `clarify-` prefix 붙은 3개 스킬이 보이면 OK. 별도 설치는 필요 없다 — 이 레포를 clone한 순간 바로 쓸 수 있다.
 > 원본은 `plugins-for-claude-natives` 레포에서 관리되며, 본 강의에서는 파일을 직접 포함시켰다.
 
 ### 2단계: 모호한 요구사항 던지기
@@ -67,7 +67,7 @@ ls .claude/skills/
 또는 직접 스킬을 호출할 수도 있다:
 
 ```
-/clarify:vague
+/clarify-vague
 ```
 
 > Claude가 AskUserQuestion으로 5-8개의 가설 기반 질문을 던질 것이다.
@@ -80,7 +80,7 @@ ls .claude/skills/
 AskUserQuestion({
   "questions": [
     {
-      "question": "clarify:vague의 핵심 원칙은 무엇인가요?",
+      "question": "clarify-vague의 핵심 원칙은 무엇인가요?",
       "header": "Quiz 1-1",
       "options": [
         {"label": "가설을 선택지로 제시 (Hypothesis-as-Options)", "description": "열린 질문 대신 가설 기반 옵션을 AskUserQuestion으로 제시"},
@@ -90,7 +90,7 @@ AskUserQuestion({
       "multiSelect": false
     },
     {
-      "question": "clarify:vague 체험 중 가장 의외였던 점은 무엇인가요?",
+      "question": "clarify-vague 체험 중 가장 의외였던 점은 무엇인가요?",
       "header": "체험 소감",
       "options": [
         {"label": "내가 뭘 원하는지 스스로 몰랐던 부분이 있었다", "description": "질문을 받으면서 비로소 깨달음"},
@@ -104,4 +104,4 @@ AskUserQuestion({
 })
 ```
 
-정답: Quiz 1-1은 1번. **Hypothesis-as-Options**이 clarify:vague의 핵심이다. 열린 질문이 아니라, Claude가 먼저 가설을 세워서 선택지로 제시한다. 체험 소감은 어떤 것이든 좋다 — 중요한 건 "clarify 받는 사람" 입장을 직접 경험한 것이다.
+정답: Quiz 1-1은 1번. **Hypothesis-as-Options**이 clarify-vague의 핵심이다. 열린 질문이 아니라, Claude가 먼저 가설을 세워서 선택지로 제시한다. 체험 소감은 어떤 것이든 좋다 — 중요한 건 "clarify 받는 사람" 입장을 직접 경험한 것이다.

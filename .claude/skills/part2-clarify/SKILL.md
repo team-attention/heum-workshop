@@ -61,8 +61,8 @@ description: Heum 3시간 강의 Part 2 — Clarify. AskUserQuestion과 Clarify 
 ### 블록 특수 규칙
 
 - **Block 0 (Concept)**: 표준 Phase A/B. AskUserQuestion 체험이 EXECUTE의 핵심.
-- **Block 1 (Experience Vague)**: **예외** — Phase A에서 Claude가 clarify:vague 프로토콜을 시연한다. 학생이 모호한 요구사항을 던지면 Claude가 AskUserQuestion으로 clarify한다. 학생은 "clarify 받는 사람" 역할.
-- **Block 2 (Build Clarify)**: 표준이지만 EXECUTE에서 플러그인의 vague SKILL.md를 Read로 분석한 후, 템플릿 기반으로 나만의 스킬을 작성한다.
+- **Block 1 (Experience Vague)**: **예외** — Phase A에서 Claude가 clarify-vague 프로토콜을 시연한다. 학생이 모호한 요구사항을 던지면 Claude가 AskUserQuestion으로 clarify한다. 학생은 "clarify 받는 사람" 역할.
+- **Block 2 (Build Clarify)**: 표준이지만 EXECUTE에서 `.claude/skills/clarify-vague/SKILL.md`를 Read로 분석한 후, 템플릿 기반으로 나만의 스킬을 작성한다.
 
 ---
 
@@ -71,7 +71,7 @@ description: Heum 3시간 강의 Part 2 — Clarify. AskUserQuestion과 Clarify 
 | Block | 주제 | 시간 |
 |-------|------|------|
 | 0 | Clarify 개념 + AskUserQuestion | ~15분 |
-| 1 | clarify:vague 체험 | ~15분 |
+| 1 | clarify-vague 체험 | ~15분 |
 | 2 | 나만의 Clarify 스킬 만들기 | ~30분 |
 | **합계** | | **~60분** |
 
@@ -124,7 +124,7 @@ AskUserQuestion({
   "header": "시작 블록",
   "options": [
     {"label": "Block 0: Concept", "description": "Clarify 개념 + AskUserQuestion 체험"},
-    {"label": "Block 1: Experience", "description": "clarify:vague 플러그인 체험"},
+    {"label": "Block 1: Experience", "description": "clarify-vague 플러그인 체험"},
     {"label": "Block 2: Build", "description": "나만의 Clarify 스킬 만들기"}
   ],
   "multiSelect": false

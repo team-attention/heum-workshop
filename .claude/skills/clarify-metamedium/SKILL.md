@@ -1,6 +1,6 @@
 ---
-name: metamedium
-description: This skill should be used when the user is building, planning, or strategizing and the key question is whether to optimize content (what) or change form (how/medium). Trigger on "내용 vs 형식", "content vs form", "metamedium", "형식을 바꿔볼까", "새로운 포맷", "관점 전환", "perspective shift", "다른 방법 없을까", "같은 방식이 안 먹혀", "diminishing returns". Applies Alan Kay's metamedium concept to surface form-level alternatives. For requirement clarification use vague; for strategy blind spots use unknown.
+name: clarify-metamedium
+description: This skill should be used when the user is building, planning, or strategizing and the key question is whether to optimize content (what) or change form (how/medium). Trigger on "내용 vs 형식", "content vs form", "metamedium", "형식을 바꿔볼까", "새로운 포맷", "관점 전환", "perspective shift", "다른 방법 없을까", "같은 방식이 안 먹혀", "diminishing returns", "/clarify-metamedium". Applies Alan Kay's metamedium concept to surface form-level alternatives. For requirement clarification use clarify-vague; for strategy blind spots use clarify-unknown.
 ---
 
 # Metamedium: Content vs Form Lens
@@ -27,7 +27,7 @@ Most people only change **content** — what they say, write, or build. The real
 - Building something and want to check if form-level change would yield more leverage
 - Evaluating whether "more of the same" or "something structurally different" is the right move
 
-For requirement clarification, use the **vague** skill. For strategy blind spot analysis, use the **unknown** skill.
+For requirement clarification, use the **clarify-vague** skill. For strategy blind spot analysis, use the **clarify-unknown** skill.
 
 ## Protocol
 

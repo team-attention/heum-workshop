@@ -1,6 +1,6 @@
 ---
-name: unknown
-description: This skill should be used when the user provides a strategy, plan, or decision document and wants to surface hidden assumptions and blind spots using the Known/Unknown 4-quadrant framework. Trigger on "known unknown", "4분면 분석", "blind spots", "뭘 놓치고 있지", "뭘 모르는지 모르겠어", "전략 점검", "전략 분석", "assumption check", "가정 점검", "quadrant analysis", "what am I missing". Strategy-level blind spot analysis with hypothesis-driven questioning. For requirement clarification use vague; for content-vs-form reframing use metamedium.
+name: clarify-unknown
+description: This skill should be used when the user provides a strategy, plan, or decision document and wants to surface hidden assumptions and blind spots using the Known/Unknown 4-quadrant framework. Trigger on "known unknown", "4분면 분석", "blind spots", "뭘 놓치고 있지", "뭘 모르는지 모르겠어", "전략 점검", "전략 분석", "assumption check", "가정 점검", "quadrant analysis", "what am I missing", "/clarify-unknown". Strategy-level blind spot analysis with hypothesis-driven questioning. For requirement clarification use clarify-vague; for content-vs-form reframing use clarify-metamedium.
 ---
 
 # Unknown: Surface Blind Spots with Known/Unknown Quadrants
@@ -13,7 +13,7 @@ Surface hidden assumptions and blind spots in any strategy, plan, or decision us
 - Decisions with unclear direction or hidden assumptions
 - Any situation where "what we don't know" matters more than "what we do know"
 
-For specific requirement clarification (feature requests, bug reports), use the **vague** skill. For content-vs-form reframing (optimizing within a form vs inventing a new form), use the **metamedium** skill.
+For specific requirement clarification (feature requests, bug reports), use the **clarify-vague** skill. For content-vs-form reframing (optimizing within a form vs inventing a new form), use the **clarify-metamedium** skill.
 
 ## Core Principle: Hypothesis-as-Options
 

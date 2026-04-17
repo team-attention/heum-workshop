@@ -1,6 +1,6 @@
 ---
-name: vague
-description: This skill should be used when the user's request or requirement is ambiguous and needs iterative questioning to become actionable. Trigger on "clarify requirements", "refine requirements", "요구사항 명확히", "요구사항 정리", "뭘 원하는 건지", "make this clearer", "spec this out", "scope this", "/clarify". Turns vague inputs into concrete specs. For strategy blind spots use unknown; for content-vs-form reframing use metamedium.
+name: clarify-vague
+description: This skill should be used when the user's request or requirement is ambiguous and needs iterative questioning to become actionable. Trigger on "clarify requirements", "refine requirements", "요구사항 명확히", "요구사항 정리", "뭘 원하는 건지", "make this clearer", "spec this out", "scope this", "/clarify-vague", "/clarify". Turns vague inputs into concrete specs. For strategy blind spots use clarify-unknown; for content-vs-form reframing use clarify-metamedium.
 ---
 
 # Vague: Requirement Clarification
@@ -13,7 +13,7 @@ Transform vague or ambiguous requirements into precise, actionable specification
 - Incomplete bug reports ("the export is broken")
 - Underspecified tasks ("make the app faster")
 
-For strategy/planning blind spot analysis, use the **unknown** skill. For content-vs-form reframing, use the **metamedium** skill.
+For strategy/planning blind spot analysis, use the **clarify-unknown** skill. For content-vs-form reframing, use the **clarify-metamedium** skill.
 
 ## Core Principle: Hypotheses as Options
 

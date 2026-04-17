@@ -2,25 +2,25 @@
 
 ## EXPLAIN
 
-### 플러그인 스킬을 해부한다
+### 스킬을 해부한다
 
-Block 1에서 clarify:vague를 체험했다. 이제 그 스킬이 **어떻게 만들어져 있는지** 직접 열어보자.
+Block 1에서 clarify-vague를 체험했다. 이제 그 스킬이 **어떻게 만들어져 있는지** 직접 열어보자.
 
-Claude에게 이렇게 요청한다:
+이 레포(`heum-3h/`)에는 원본이 이미 `.claude/skills/clarify-vague/SKILL.md` 경로에 있다. Claude에게 이렇게 요청한다:
 
 ```
-clarify 플러그인의 vague SKILL.md를 Read로 읽어줘
+.claude/skills/clarify-vague/SKILL.md를 Read로 읽어줘
 ```
 
-> Claude가 Read 도구로 설치된 플러그인의 SKILL.md 파일을 열어서 보여줄 것이다.
+> Claude가 Read 도구로 파일을 열어서 보여줄 것이다.
 
 ### SKILL.md의 구조
 
-vague SKILL.md를 열어보면 이런 구조로 되어 있다:
+clarify-vague SKILL.md를 열어보면 이런 구조로 되어 있다:
 
 ```
 ---
-name: vague                          ← 스킬 이름
+name: clarify-vague                   ← 스킬 이름 (폴더명과 동일)
 description: ...trigger on...         ← 언제 이 스킬이 호출되는지
 ---
 
@@ -53,7 +53,7 @@ description: ...trigger on...         ← 언제 이 스킬이 호출되는지
 
 ### 6단계 작성 가이드
 
-1. **Read**: 플러그인의 vague SKILL.md를 읽어서 구조를 파악한다
+1. **Read**: `.claude/skills/clarify-vague/SKILL.md`를 읽어서 구조를 파악한다
 2. **Copy**: 이 스킬의 `templates/clarify-vague.md` 템플릿을 가져온다
 3. **Customize**: `<!-- CUSTOMIZE -->` 주석이 있는 부분을 자기 업무에 맞게 수정한다
 4. **Save**: `.claude/skills/my-clarify/SKILL.md`로 저장한다
@@ -69,7 +69,7 @@ description: ...trigger on...         ← 언제 이 스킬이 호출되는지
 먼저 원본을 분석한다. Claude에게 이렇게 요청한다:
 
 ```
-clarify 플러그인의 vague SKILL.md를 Read로 읽어서 구조를 분석해줘
+.claude/skills/clarify-vague/SKILL.md를 Read로 읽어서 구조를 분석해줘
 ```
 
 ### 2단계: 템플릿 기반으로 작성

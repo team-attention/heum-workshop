@@ -1,6 +1,6 @@
 ---
-name: history-insight
-description: This skill should be used when user wants to access, capture, or reference Claude Code session history. Trigger when user says "capture session", "save session history", or references past/current conversation as a source - whether for saving, extracting, summarizing, or reviewing. This includes any mention of "what we discussed", "today's work", "session history", or when user treats the conversation itself as source material (e.g., "from our conversation").
+name: wrap-history
+description: This skill should be used when user wants to access, capture, or reference Claude Code session history. Trigger when user says "capture session", "save session history", "/wrap-history", or references past/current conversation as a source - whether for saving, extracting, summarizing, or reviewing. This includes any mention of "what we discussed", "today's work", "session history", or when user treats the conversation itself as source material (e.g., "from our conversation").
 version: 1.1.0
 user-invocable: true
 ---

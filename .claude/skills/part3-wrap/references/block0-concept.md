@@ -46,7 +46,7 @@ Multi-agent를 실제로 쓸 때, 가장 많이 쓰는 패턴이 **2-Phase Pipel
 
 ---
 
-### 3. session-wrap이란?
+### 3. wrap-session이란?
 
 **비유: "퇴근 전 책상 정리 루틴"**
 
@@ -57,7 +57,7 @@ Multi-agent를 실제로 쓸 때, 가장 많이 쓰는 패턴이 **2-Phase Pipel
 - 내일 할 일 목록 작성
 - 책상 위 서류 정돈
 
-**session-wrap**은 Claude Code 세션을 끝낼 때 자동으로 실행되는 "종합 정리 스킬"입니다. 위에서 배운 Multi-agent + 2-Phase Pipeline을 활용해서, 오늘의 작업을 체계적으로 정리해줍니다.
+**wrap-session**은 Claude Code 세션을 끝낼 때 자동으로 실행되는 "종합 정리 스킬"입니다. 위에서 배운 Multi-agent + 2-Phase Pipeline을 활용해서, 오늘의 작업을 체계적으로 정리해줍니다.
 
 **전체 흐름 다이어그램:**
 
@@ -80,7 +80,7 @@ Multi-agent를 실제로 쓸 때, 가장 많이 쓰는 패턴이 **2-Phase Pipel
 └─────────────────────────────────────────────────┘
 ```
 
-정리하면, session-wrap은 **"내가 퇴근 전에 일일이 정리할 필요 없이, Claude가 알아서 팀장 4명에게 보고를 받고 정리해주는 것"**입니다.
+정리하면, wrap-session은 **"내가 퇴근 전에 일일이 정리할 필요 없이, Claude가 알아서 팀장 4명에게 보고를 받고 정리해주는 것"**입니다.
 
 ---
 
@@ -90,25 +90,25 @@ Multi-agent를 실제로 쓸 때, 가장 많이 쓰는 패턴이 **2-Phase Pipel
 
 ### Step 0. 플러그인 확인
 
-session-wrap 원본 스킬은 플러그인으로 이미 설치되어 있습니다. 아래 명령어로 확인하세요:
+wrap-session 원본 스킬은 플러그인으로 이미 설치되어 있습니다. 아래 명령어로 확인하세요:
 
 ```
 설치된 플러그인 목록을 보여줘
 ```
 
-목록에 `session-wrap`이 있으면 다음 단계로 넘어갑니다. 없다면 강사에게 문의하세요.
+목록에 `wrap-session`이 있으면 다음 단계로 넘어갑니다. 없다면 강사에게 문의하세요.
 
-### Step 1. session-wrap 원본 읽어보기
+### Step 1. wrap-session 원본 읽어보기
 
 Claude Code에서 아래 명령어를 입력하세요:
 
 ```
-설치된 session-wrap 스킬의 SKILL.md 내용을 보여줘
+설치된 wrap-session 스킬의 SKILL.md 내용을 보여줘
 ```
 
-Claude가 session-wrap 스킬의 전체 내용을 보여줄 것입니다. 천천히 읽어보세요.
+Claude가 wrap-session 스킬의 전체 내용을 보여줄 것입니다. 천천히 읽어보세요.
 
-> 이 레포(`heum-3h/`)에는 session-wrap 원본이 `.claude/skills/session-wrap/SKILL.md`에 이미 포함되어 있다. 에이전트는 `.claude/agents/` 아래에 있다. 별도 설치 불필요.
+> 이 레포(`heum-3h/`)에는 wrap-session 원본이 `.claude/skills/wrap-session/SKILL.md`에 이미 포함되어 있다. 에이전트는 `.claude/agents/` 아래에 있다. 별도 설치 불필요.
 
 ### Step 2. 구조 분석
 
@@ -123,7 +123,7 @@ Claude가 session-wrap 스킬의 전체 내용을 보여줄 것입니다. 천천
 Claude에게 아래와 같이 요청해보세요:
 
 ```
-session-wrap SKILL.md에서 각 섹션이 하는 역할을 표로 정리해줘. 이름표 부분, 실행 흐름, 단계별 내용을 구분해서.
+wrap-session SKILL.md에서 각 섹션이 하는 역할을 표로 정리해줘. 이름표 부분, 실행 흐름, 단계별 내용을 구분해서.
 ```
 
 > "frontmatter"라는 용어가 나올 수 있는데, 이것은 파일 맨 위에 적는 "이름표"입니다. Block 1에서 자세히 배웁니다.
@@ -147,7 +147,7 @@ session-wrap SKILL.md에서 각 섹션이 하는 역할을 표로 정리해줘. 
 ```json
 AskUserQuestion({
   "questions": [{
-    "question": "session-wrap의 2-Phase Pipeline에서, Phase 2(duplicate-checker)가 필요한 이유는?",
+    "question": "wrap-session의 2-Phase Pipeline에서, Phase 2(duplicate-checker)가 필요한 이유는?",
     "header": "Quiz 0",
     "options": [
       {"label": "4명의 전문가가 비슷한 제안을 할 수 있어서", "description": "중복을 걸러내야 깔끔한 결과가 나온다"},

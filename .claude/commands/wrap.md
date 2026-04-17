@@ -9,7 +9,7 @@ Wrap up the current session by analyzing work done and suggesting improvements.
 
 ## Prerequisites
 
-Before starting, load the session-wrap skill for detailed workflow guidance.
+Before starting, load the wrap-session skill for detailed workflow guidance.
 
 ## Quick Usage
 
@@ -18,7 +18,7 @@ Before starting, load the session-wrap skill for detailed workflow guidance.
 
 ## Execution
 
-Follow the workflow defined in the **session-wrap** skill:
+Follow the workflow defined in the **wrap-session** skill:
 
 1. Check git status
 2. Phase 1: Run 4 analysis agents in parallel
@@ -26,4 +26,4 @@ Follow the workflow defined in the **session-wrap** skill:
 4. Integrate results and present options
 5. Execute selected actions
 
-Refer to `skills/session-wrap/SKILL.md` for detailed execution steps and agent configurations.
+Refer to `skills/wrap-session/SKILL.md` for detailed execution steps and agent configurations.

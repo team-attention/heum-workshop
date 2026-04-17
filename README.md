@@ -13,7 +13,7 @@
 |------|------|------|----------|
 | Part 1 | **Sync** — MCP & Context Sync | ~60분 | MCP 개념, Connector, 스킬로 정보 통합 |
 | Part 2 | **Clarify** — 모호함을 구조화 | ~60분 | AskUserQuestion, Hypothesis-as-Options, 나만의 Clarify 스킬 |
-| Part 3 | **Wrap** — Multi-agent 세션 정리 | ~60분 | session-wrap 스킬 직접 작성, history-insight |
+| Part 3 | **Wrap** — Multi-agent 세션 정리 | ~60분 | wrap-session 스킬 직접 작성, wrap-history |
 | Part Extra | Agent Teams / Hook / Plugin | 선택 | 시간이 남거나 질문이 나올 때 선택적으로 다룸 |
 
 각 Part는 Phase A(설명+실행 안내 → Stop) → Phase B(퀴즈+피드백)의 **2턴 진행 프로토콜**로 운영된다. 자세한 내용은 각 스킬의 `SKILL.md` 참조.
@@ -53,7 +53,7 @@ claude
 # 3. 스킬 호출 — 예: "Part 1 시작" 또는 "clarify 써보자"
 ```
 
-> 핵심 스킬(`vague`, `unknown`, `metamedium`, `session-wrap`, `history-insight`, `session-analyzer`, `team-assemble`)은 모두 `.claude/skills/` 아래에 직접 포함되어 있다. 원본은 [plugins-for-claude-natives](https://github.com/team-attention/plugins-for-claude-natives)에서 관리되지만, 강의 중 설치 단계로 시간 낭비하지 않도록 파일을 그대로 넣어뒀다.
+> 핵심 스킬(`clarify-vague`, `clarify-unknown`, `clarify-metamedium`, `wrap-session`, `wrap-history`, `wrap-analyzer`, `team-assemble`)은 모두 `.claude/skills/` 아래에 직접 포함되어 있다. 폴더명 prefix(`clarify-*`, `wrap-*`)로 `/` 자동완성 시 관련 스킬끼리 묶여서 보인다. 원본은 [plugins-for-claude-natives](https://github.com/team-attention/plugins-for-claude-natives)에서 관리되며, 강의 중 설치 단계로 시간 낭비하지 않도록 파일을 그대로 넣어뒀다.
 
 ## 디렉토리 구조
 
@@ -79,14 +79,14 @@ heum-3h/
     │   │   └── references/
     │   │
     │   │  ── 수강생이 바로 사용하는 핵심 스킬 (plugins-for-claude-natives 원본) ──
-    │   ├── vague/                # clarify: 모호한 요구 → 구조화된 질문
-    │   ├── unknown/              # clarify: 알지 못하는 영역 드러내기
-    │   ├── metamedium/           # clarify: 메타 수준의 명확화
-    │   ├── session-wrap/         # 세션 종료 시 multi-agent로 정리
-    │   ├── history-insight/      # 과거 세션 기록 분석
-    │   ├── session-analyzer/     # 스킬 실행 검증
-    │   └── team-assemble/        # 전문가 팀 구성 + 병렬 실행
-    ├── agents/                   # session-wrap이 호출하는 subagent 5종
+    │   ├── clarify-vague/        # 모호한 요구 → 구조화된 질문  (/clarify-vague)
+    │   ├── clarify-unknown/      # 알지 못하는 영역 드러내기     (/clarify-unknown)
+    │   ├── clarify-metamedium/   # 메타 수준의 명확화            (/clarify-metamedium)
+    │   ├── wrap-session/         # 세션 종료 multi-agent 정리    (/wrap)
+    │   ├── wrap-history/         # 과거 세션 기록 분석           (/wrap-history)
+    │   ├── wrap-analyzer/        # 스킬 실행 검증                (/wrap-analyzer)
+    │   └── team-assemble/        # 전문가 팀 구성 + 병렬 실행   (/team-assemble)
+    ├── agents/                   # wrap-session이 호출하는 subagent 5종
     │   ├── automation-scout.md
     │   ├── doc-updater.md
     │   ├── duplicate-checker.md

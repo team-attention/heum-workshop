@@ -178,13 +178,15 @@ AskUserQuestion은 이런 구조로 되어 있다:
 
 ### 이 레포에 이미 포함된 clarify 스킬
 
-Heum 3시간 강의 레포(`heum-3h/`)에는 `clarify` 계열 스킬(vague, unknown, metamedium)이 **이미 포함**되어 있다. 별도 설치 없이 바로 사용 가능.
+Heum 3시간 강의 레포(`heum-3h/`)에는 `clarify-*` 계열 스킬 3종이 **이미 포함**되어 있다. 별도 설치 없이 바로 사용 가능.
 
 ```
-.claude/skills/vague/         ← 모호한 요구를 구조화된 질문으로 변환
-.claude/skills/unknown/       ← 알지 못하는 영역을 드러내는 프레임워크
-.claude/skills/metamedium/    ← 메타 수준의 명확화
+.claude/skills/clarify-vague/        ← 모호한 요구를 구조화된 질문으로 변환     (/clarify-vague)
+.claude/skills/clarify-unknown/      ← 알지 못하는 영역을 드러내는 프레임워크    (/clarify-unknown)
+.claude/skills/clarify-metamedium/   ← 메타 수준의 명확화                      (/clarify-metamedium)
 ```
+
+> `/` 슬래시를 누르면 `clarify-` prefix로 3개 스킬이 묶여서 자동완성된다.
 
 > 원본은 `plugins-for-claude-natives` 레포(team-attention)에서 관리되지만, 본 강의에서는 설치 단계 없이 바로 쓸 수 있도록 파일을 직접 넣어두었다.
 

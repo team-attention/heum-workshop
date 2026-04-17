@@ -1,6 +1,6 @@
 ---
-name: session-wrap
-description: This skill should be used when the user asks to "wrap up session", "end session", "session wrap", "/wrap", "document learnings", "what should I commit", or wants to analyze completed work before ending a coding session.
+name: wrap-session
+description: This skill should be used when the user asks to "wrap up session", "end session", "session wrap", "/wrap", "/wrap-session", "document learnings", "what should I commit", or wants to analyze completed work before ending a coding session.
 version: 2.0.0
 ---
 

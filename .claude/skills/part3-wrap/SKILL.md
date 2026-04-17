@@ -1,6 +1,6 @@
 ---
 name: part3-wrap
-description: Heum 3시간 강의 Part 3 — Wrap. session-wrap 스킬을 직접 만들고, 만든 스킬을 실행하고, history-insight로 세션을 분석한다. "파트3", "Part 3", "wrap", "세션 래핑", "session wrap" 요청에 사용.
+description: Heum 3시간 강의 Part 3 — Wrap. wrap-session 스킬을 직접 만들고, 만든 스킬을 실행하고, wrap-history로 세션을 분석한다. "파트3", "Part 3", "wrap", "세션 래핑", "session wrap" 요청에 사용.
 ---
 
 # Part 3: Wrap
@@ -13,12 +13,12 @@ description: Heum 3시간 강의 Part 3 — Wrap. session-wrap 스킬을 직접 
 
 | 용어 | 설명 |
 |------|------|
-| **session-wrap** | 코딩 세션이 끝날 때 작업을 정리하고 문서화하는 스킬. "퇴근 전 책상 정리" |
+| **wrap-session** | 코딩 세션이 끝날 때 작업을 정리하고 문서화하는 스킬. "퇴근 전 책상 정리" |
 | **multi-agent** | 여러 에이전트가 동시에 일하는 패턴. "회의에서 각 팀장에게 동시에 보고 받기" |
 | **병렬(Parallel)** | 여러 작업을 동시에 처리하는 것. 반대는 순차 |
 | **2-Phase Pipeline** | 먼저 분석(Phase 1, 병렬) → 다음 검증(Phase 2, 순차) |
 | **frontmatter** | 스킬 파일 맨 위에 `---`로 감싸서 적는 "이름표" |
-| **history-insight** | 과거 세션 기록을 분석해 인사이트를 추출하는 스킬 |
+| **wrap-history** | 과거 세션 기록을 분석해 인사이트를 추출하는 스킬 |
 
 ---
 
@@ -68,7 +68,7 @@ description: Heum 3시간 강의 Part 3 — Wrap. session-wrap 스킬을 직접 
 
 | Block | 주제 | 예상 시간 |
 |-------|------|-----------|
-| 0 | 개념 이해 (multi-agent + session-wrap) | ~10분 |
+| 0 | 개념 이해 (multi-agent + wrap-session) | ~10분 |
 | 1 | 스킬 만들기 | ~25분 |
 | 2 | 실행 & 검증 | ~15분 |
 | 3 | History Insight | ~10분 |
@@ -82,16 +82,16 @@ description: Heum 3시간 강의 Part 3 — Wrap. session-wrap 스킬을 직접 
 ## 핵심 전략: 원본 스킬을 해체하며 배우기
 
 ```
-Block 0:  session-wrap 구조 + multi-agent 원리 이해
+Block 0:  wrap-session 구조 + multi-agent 원리 이해
    ↓
 Block 1:  SKILL.md를 Step-by-Step으로 직접 작성 (가장 긴 블록)
    ↓
 Block 2:  만든 스킬 실행 → 결과 확인
    ↓
-Block 3:  history-insight로 오늘 세션 자체를 분석 (메타 인지)
+Block 3:  wrap-history로 오늘 세션 자체를 분석 (메타 인지)
 ```
 
-> session-wrap 원본은 플러그인에 설치되어 있다. 참가자는 이를 참고하면서 자기만의 버전을 만든다.
+> wrap-session 원본은 플러그인에 설치되어 있다. 참가자는 이를 참고하면서 자기만의 버전을 만든다.
 
 ---
 
@@ -99,10 +99,10 @@ Block 3:  history-insight로 오늘 세션 자체를 분석 (메타 인지)
 
 | 블록 | 파일 | 주제 |
 |------|------|------|
-| Block 0 | `references/block0-concept.md` | Multi-agent 패턴 + session-wrap 개념 |
-| Block 1 | `references/block1-build-session-wrap.md` | session-wrap 스킬 직접 만들기 |
-| Block 2 | `references/block2-run-session-wrap.md` | 만든 스킬 실행 + 검증 |
-| Block 3 | `references/block3-history-insight.md` | history-insight 실습 |
+| Block 0 | `references/block0-concept.md` | Multi-agent 패턴 + wrap-session 개념 |
+| Block 1 | `references/block1-build-wrap-session.md` | wrap-session 스킬 직접 만들기 |
+| Block 2 | `references/block2-run-wrap-session.md` | 만든 스킬 실행 + 검증 |
+| Block 3 | `references/block3-wrap-history.md` | wrap-history 실습 |
 
 > 각 reference 파일은 `## EXPLAIN`, `## EXECUTE`, `## QUIZ` 섹션으로 구성된다.
 > 원본 Day 4의 Block 4(Session Analyzer)와 Block 5(Content Digest)는 본 강의에서 제외되었다.
@@ -118,7 +118,7 @@ AskUserQuestion({
   "question": "Part 3: Wrap\n\n어디서부터 시작할까요?",
   "header": "시작 블록",
   "options": [
-    {"label": "Block 0: 개념 이해", "description": "Multi-agent 패턴과 session-wrap 개념부터"},
+    {"label": "Block 0: 개념 이해", "description": "Multi-agent 패턴과 wrap-session 개념부터"},
     {"label": "Block 1: 스킬 만들기", "description": "바로 SKILL.md 작성하기"},
     {"label": "Block 2: 실행 & 검증", "description": "이미 만들었으니 실행만"},
     {"label": "Block 3: History Insight", "description": "세션 히스토리 분석부터"}
