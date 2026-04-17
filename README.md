@@ -1,6 +1,11 @@
 # Heum 3시간 강의 — Claude Code 실전 (Sync / Clarify / Wrap)
 
-> AI Native Camp(7일 커리큘럼)의 **핵심 3종 세트**를 3시간에 압축한 Heum Labs 공동 세션용 레포.
+> **AI Native Camp Camp-2(7일 커리큘럼)를 증류(distill)하여 3시간에 압축**한 Heum Labs 공동 세션용 레포.
+>
+> 원본 커리큘럼은 22블록 / 총 ~8시간 분량이며, 본 레포는 핵심 3종(sync/clarify/wrap)과 선택적 Extra 블록으로 축약했다.
+>
+> - 🌐 AI Native Camp 공식 사이트: https://ainativecamp-production.up.railway.app/
+> - 💻 원본 Camp-2 커리큘럼 (GitHub): https://github.com/ai-native-camp/camp-2
 
 ## 강의 구성
 
@@ -68,16 +73,27 @@ heum-3h/
             └── references/       # block 3-5, 3-6, 3-7 (원본 Day 1에서 엄선)
 ```
 
-## 원본 커리큘럼 출처
+## 원본 커리큘럼 출처 (Distillation Source)
 
-본 3시간 강의는 AI Native Camp Camp-2의 7일 커리큘럼에서 핵심 블록을 엄선한 것이다.
-전체 커리큘럼은 아래 참조:
+본 3시간 강의는 **AI Native Camp Camp-2의 7일 커리큘럼을 증류(distill)**하여 핵심 블록만 엄선한 축약판이다.
 
-- 원본 위치: `business/partners/delta/ai-native-camp/headquarters/camp-2/`
-- Part 1 ← Day 2 (MCP & Context Sync, 11블록 중 4개)
-- Part 2 ← Day 3 (Clarify, 5블록 중 3개)
-- Part 3 ← Day 4 (Wrap & Analyze, 6블록 중 4개)
-- Part Extra ← Day 1 (Onboarding의 Agent Teams / Hook / Plugin 블록)
+- 🌐 AI Native Camp 공식 사이트: https://ainativecamp-production.up.railway.app/
+- 💻 원본 Camp-2 GitHub: https://github.com/ai-native-camp/camp-2
+- 로컬 참조 경로: `business/partners/delta/ai-native-camp/headquarters/camp-2/`
+
+### 증류 매핑
+
+| 본 레포 | ← 원본 Camp-2 | 축약 비율 |
+|---------|---------------|----------|
+| Part 1 (sync) | Day 2 — MCP & Context Sync | 11블록 → **4블록** |
+| Part 2 (clarify) | Day 3 — Clarify & GitHub | 5블록 → **3블록** |
+| Part 3 (wrap) | Day 4 — Wrap & Analyze | 6블록 → **4블록** |
+| Part Extra | Day 1 — Onboarding (Agent Teams / Hook / Plugin) | 7블록 → **3블록** |
+
+> 전체 커리큘럼(7일) 이수를 원하는 참가자는 원본 Camp-2 GitHub 레포에서 설치 가능:
+> ```bash
+> npx skills add ai-native-camp/camp-2
+> ```
 
 ## Claude Code 사용 안내
 
