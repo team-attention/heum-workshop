@@ -38,22 +38,76 @@
 
 > 커리큘럼은 **뼈대**이고 공동 세션은 **살**이다. 참가자 눈빛이 바뀌는 순간을 따라간다.
 
-## 설치 — 없음 (self-contained)
+## Step 0: Claude Code 설치
 
-이 레포는 **clone만 하면 바로 쓸 수 있다**. 별도 플러그인 설치나 `npx skills add` 같은 명령이 필요 없다.
+스킬을 사용하려면 먼저 Claude Code가 설치되어 있어야 합니다.
 
-```bash
-# 1. 이 레포를 clone
-git clone <repo-url> heum-3h
-cd heum-3h
+### 사전 확인
 
-# 2. Claude Code 실행 (이 폴더에서)
-claude
+| 항목 | 조건 |
+|------|------|
+| **OS** | macOS 10.15+, Ubuntu 20.04+/Debian 10+, Windows 10+ (WSL 필요) |
+| **RAM** | 4GB 이상 |
+| **네트워크** | 인터넷 연결 필수 (오프라인 사용 불가) |
+| **셸** | Bash, Zsh, Fish |
+| **계정** | Claude Pro, Max, Teams, Enterprise 중 하나 |
 
-# 3. 스킬 호출 — 예: "Part 1 시작" 또는 "clarify 써보자"
+> **Node.js는 필요 없습니다.** 아래 방법(native installer)으로 설치하면 Node.js 없이 단독 실행됩니다.
+
+### 설치 방법
+
+[https://claude.ai](https://claude.ai) 에 접속해서 대화창에 이렇게 입력하세요:
+
+```
+Claude Code 설치하는 방법 알려줘
 ```
 
-> 핵심 스킬(`clarify-vague`, `clarify-unknown`, `clarify-metamedium`, `wrap-session`, `wrap-history`, `wrap-analyzer`, `team-assemble`)은 모두 `.claude/skills/` 아래에 직접 포함되어 있다. 폴더명 prefix(`clarify-*`, `wrap-*`)로 `/` 자동완성 시 관련 스킬끼리 묶여서 보인다. 원본은 [plugins-for-claude-natives](https://github.com/team-attention/plugins-for-claude-natives)에서 관리되며, 강의 중 설치 단계로 시간 낭비하지 않도록 파일을 그대로 넣어뒀다.
+Claude가 여러분의 환경에 맞는 설치 방법을 단계별로 안내해줍니다. 그대로 따라하세요.
+
+<details>
+<summary>설치 명령어 직접 보기 (참고용)</summary>
+
+**macOS / Linux / WSL:**
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+**Windows (PowerShell):**
+
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+**Windows (CMD):**
+
+```cmd
+curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+```
+
+</details>
+
+### 설치 확인
+
+터미널을 열고 아래 명령어를 입력합니다:
+
+```
+claude
+```
+
+Claude가 인사하면 성공입니다. 계정 인증(로그인) 안내가 나오면 그대로 진행하세요.
+
+## Step 1: 스킬 설치
+
+```bash
+npx skills add team-attention/heum-workshop --agent claude-code --yes
+```
+
+이 한 줄이면 Heum 워크숍의 모든 스킬이 Claude Code에 설치됩니다.
+
+> 설치 후 Claude Code에서 `/part1-sync`로 시작하거나, `/clarify-vague` · `/wrap` 등 개별 스킬을 바로 호출할 수 있습니다.
+
+> 핵심 스킬(`clarify-vague`, `clarify-unknown`, `clarify-metamedium`, `wrap-session`, `wrap-history`, `wrap-analyzer`, `team-assemble`)이 모두 함께 설치된다. 폴더명 prefix(`clarify-*`, `wrap-*`)로 `/` 자동완성 시 관련 스킬끼리 묶여서 보인다. 원본은 [plugins-for-claude-natives](https://github.com/team-attention/plugins-for-claude-natives)에서 관리되며, 본 워크숍 레포에 파일로 직접 포함되어 있다.
 
 ## 디렉토리 구조
 
